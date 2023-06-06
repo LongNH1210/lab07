@@ -1,0 +1,39 @@
+<table class="table table-primary text-center bg-light mt-3 mb-3">
+    <tr>
+        <th class="h1 text text-danger" colspan="6">Mobile List ({{total}})</th>
+        <th>
+            <a class="btn btn-success" href="/add">Add</a>
+            <a class="btn btn-success" href="/drop"
+            onclick= "return confirm('Are you sure want to delete all')">Drop</a>
+        </th>
+    </tr>
+    <tr class="h4 text text-warning">
+        <th class="h4 text text-primary">Tên</th>
+        <th class="h4 text text-primary">Thương Hiệu</th>
+        <th class="h4 text text-primary">Màu sắc</th>
+        <th class="h4 text text-primary">Số lượng</th>
+        <th class="h4 text text-primary">Ảnh</th>
+        <th class="h4 text text-primary">Video</th>
+        <th class="h4 text text-primary">Menu</th>
+    </tr>
+    {{#each mobiles }}
+    <tr>
+        <th>{{ name }}</th>
+        <th>{{ brand }}</th>
+        <th>{{ color }}</th>
+        <th>{{ quantity }}</th>
+        <th>
+            <img src="{{ image }}" width="100" height="100">
+        </th>
+        <th>
+            <iframe src="https://www.youtube.com/embed/{{ video }}" width="200" height="200"></iframe>
+        </th>
+        <th>
+            <a class="btn btn-warning" href="/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/delete/{{_id}}"
+            onclick="return confirm('Are you sure to delete this mobile?')">Delete</a>
+        </th>
+    </tr>
+    {{/each}}
+
+</table>
