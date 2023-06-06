@@ -1,13 +1,14 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 var MobileSchema = mongoose.Schema(
-    {
-        name : String,
-        brand : String,
-        color : String,
-        quantity : Number,
-        image : String, 
-        video : String
-    }
+   {
+      name: String,
+      brand: String,
+      color: String,
+      quantity: Number, 
+      image: String,
+      video: String,
+      price: Number
+   }
 )
-var MobileModels = mongoose.model("Dien Thoai", MobileSchema, "mobile");
-module.exports = MobileModels;
+var MobileModel = mongoose.model("DIEN THOAI", MobileSchema, "mobile");
+module.exports = MobileModel;
